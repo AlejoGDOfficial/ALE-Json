@@ -1,0 +1,16 @@
+{
+    "name": "ale-json",
+    "url": "https://github.com/AlejoGDOfficial/ALE-Json",
+    "license": "MIT",
+    "tags": [
+        "haxe",
+        "json",
+        "jsonc"
+    ],
+    "description": "Generic “JSON with Comments” Library for Haxe",
+    "version": "0.0.1",
+    "releasenote": "",
+    "contributors": [
+        "AlejoGDOfficial"
+    ]
+}
