@@ -8,14 +8,15 @@ class Main
 {
     static function main()
     {
-        function bechmark(func:Void -> Void, ?title:String)
+        function bechmark(func:Void -> Dynamic, ?title:String)
         {
             final start:Float = Timer.stamp();
 
-            for (i in 0...10000)
-                func();
+            var res:Dynamic = null;
+            
+                res = func();
 
-            trace((title == null ? '' : title + ' Json : ') + Std.string(Timer.stamp() - start));
+            trace((title == null ? '' : title + ' Json: ') + Std.string(Timer.stamp() - start) + ' - ' + res);
         }
 
         Config.PATH = 'data/';
@@ -23,9 +24,5 @@ class Main
         final source = Config.FILE_READER(Config.PATH + 'test' + Config.EXTENSION);
 
         bechmark(() -> Json.parse(source), 'ALE');
-
-        bechmark(() -> haxe.Json.parse(source), 'Std');
-
-        bechmark(() -> jsonmod.Json.parse(source), 'Mod');
     }
 }

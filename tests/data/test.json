@@ -1,32 +1,36 @@
 {
-	"oso": [
-		"donde",
+	"string": "Hola mundo",
+	"number": 123,
+	"negativeNumber": -456,
+	"decimal": 3.14159,
+	"scientificPositive": 1.23e4,
+	"scientificNegative": 5.67E-8,
+	"booleanTrue": true,
+	"booleanFalse": false,
+	"nullValue": null,
+	"array": [
+		"texto",
+		42,
+		true,
+		false,
+		null,
 		{
-			"tu": [
-				"ta",
-				10
-			]
+			"nested": "object"
 		},
-		"donde",
-		{
-			"tu": [
-				"ta",
-				10
-			]
-		},
-		"donde",
-		{
-			"tu": [
-				"ta",
-				10
-			]
-		},
-		"donde",
-		{
-			"tu": [
-				"ta",
-				10
-			]
-		}
-	]
+		[
+			1,
+			2,
+			3
+		]
+	],
+	"object": {
+		"name": "Alejo",
+		"age": 17,
+		"active": true,
+		"data": null
+	},
+	"emptyArray": [],
+	"emptyObject": {},
+	"escapedString": "Linea 1\nLinea 2\tTabulacion\rRetorno\\Barra\"Comillas\/Slash",
+	"unicodeString": "\u0048\u006F\u006C\u0061"
 }
