@@ -25,14 +25,6 @@ jobs:
             dependencies: 
             build_postfix: --hl bin\bin.hl -cmd "hl bin\bin.hl"
 
-          - platform: Lua
-            dependencies: haxelib install hxluajit
-            build_postfix: --lua bin/bin.lua
-
-          - platform: JavaScript
-            dependencies: 
-            build_postfix: --js bin/bin.js
-
     steps:
       - uses: actions/checkout@v4
 
