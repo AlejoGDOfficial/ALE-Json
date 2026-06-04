@@ -56,4 +56,4 @@ jobs:
       - name: Build
         run: |
           cd tests
-          haxe build.hxml -D VERBOSE_TEST ${{ matrix.build_postfix }}
+          haxe build.hxml ${{ matrix.build_postfix }}
