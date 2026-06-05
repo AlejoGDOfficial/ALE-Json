@@ -8,7 +8,7 @@
         "jsonc"
     ],
     "description": "Generic “JSON with Comments” Library for Haxe",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "releasenote": "",
     "contributors": [
         "AlejoGDOfficial"
