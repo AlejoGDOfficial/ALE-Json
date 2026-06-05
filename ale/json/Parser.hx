@@ -2,7 +2,7 @@ package ale.json;
 
 using StringTools;
 
-class JsonParser
+class Parser
 {
     final source:String;
 
@@ -37,6 +37,7 @@ class JsonParser
         if (char == '\n'.code)
         {
             line++;
+
             column = 1;
         } else {
             column++;
@@ -63,7 +64,7 @@ class JsonParser
         error('Unexpected Token: ' + peekString() + (expected == null ? '' : ' - Expected: ' + String.fromCharCode(expected)));
 
     function error(msg:String)
-        throw 'Line: ' + line + ' - Column: ' + column + ': ' + msg;
+        throw new Exception(msg, line, column);
 
     function readNumber():Float
     {

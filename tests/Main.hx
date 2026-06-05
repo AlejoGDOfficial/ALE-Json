@@ -12,10 +12,8 @@ class Main
         {
             final start:Float = Timer.stamp();
 
-            var res:Dynamic = null;
+            final res:Dynamic = func();
             
-                res = func();
-
             trace((title == null ? '' : title + ' Json: ') + Std.string(Timer.stamp() - start) + ' - ' + res);
         }
 

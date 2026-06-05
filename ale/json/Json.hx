@@ -16,9 +16,9 @@ class Json
                     source = Config.FILE_READER(path);
             }
 
-            return new JsonParser(source).parse();
+            return new Parser(source).parse();
         } catch (e) {
-            Config.ERROR_HANDLER(e.message);
+            Config.ERROR_HANDLER(e);
 
             return null;
         }

@@ -5,6 +5,7 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 
+import haxe.Exception as HaxeException;
 import haxe.Log;
 
 class Defaults
@@ -15,5 +16,16 @@ class Defaults
     public static final PATH:String = '';
     public static final EXTENSION:String = '.json';
 
-    public static final ERROR_HANDLER:String -> Void = (e) -> Log.trace('[ ERROR ] ' + e, null);
+    public static final ERROR_HANDLER:HaxeException -> Void = (exc:HaxeException) -> {
+        var msg:String = exc.message;
+
+        if (exc is Exception)
+        {
+            final castExc:Exception = cast exc;
+
+            msg = 'Line: ' + castExc.line + ', Column: ' + castExc.column + ' - ' + msg;
+        }
+
+        Log.trace('[ ERROR ] ' + msg, null);
+    };
 }
